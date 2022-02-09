@@ -1,16 +1,16 @@
 <?php
 function get_urls(){
     if (file_exists("../pcurl.csv")){
-        $fp = fopen("../pcurl.csv",'r')
-        $pcurls = fread($fp,filesize("../pcurl.csv"))
-        $pcurls = explode(',',$pcurls)
+        $fp = fopen("../pcurl.csv",'r');
+        $pcurls = fread($fp,filesize("../pcurl.csv"));
+        $end_pcurls = explode(',',$pcurls);
     }
     if (file_exists("../peurl.csv")){
-        $fp = fopen("../peurl.csv",'r')
-        $peurls = fread($fp,filesize("../peurl.csv"))
-        $peurls = explode(',',$peurls)
+        $fp = fopen("../peurl.csv",'r');
+        $peurls = fread($fp,filesize("../peurl.csv"));
+        $end_peurls = explode(',',$peurls);
     }
-    return pcurls,peurls
+    return end_pcurls,end_peurls;
 
 
 function get_ua(pcurls,peurls){
