@@ -42,4 +42,5 @@ function main(){
     get_ua($pcurls,$peurls);
 }
 
+main()
 ?>
