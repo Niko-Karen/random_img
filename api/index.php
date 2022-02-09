@@ -11,6 +11,7 @@ function get_urls(){
         $end_peurls = explode(',',$peurls);
     }
     return $end_pcurls,$end_peurls;
+}
 
 
 function get_ua(pcurls,peurls){
