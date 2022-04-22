@@ -1,8 +1,8 @@
 <?php
 $agent = $_SERVER['HTTP_USER_AGENT'];
 if(stripos($agent,'android')!==false || stripos($agent, 'iphone')!==false){
-    if (file_exists('../peurl.csv')) {
-		$url = file('../peurl.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    if (file_exists('peurl.csv')) {
+		$url = file('peurl.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 	} else {
 		$url = file('https://' . $_SERVER['HTTP_HOST'] . '/peurl.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 	}
@@ -78,7 +78,7 @@ if(stripos($agent,'android')!==false || stripos($agent, 'iphone')!==false){
 	}
 }else {
     if (file_exists('../pcurl.csv')) {
-		$url = file('../pcurl.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+		$url = file('pcurl.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 	} else {
 		$url = file('http://' . $_SERVER['HTTP_HOST'] . '/pcurl.csv', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 	}
